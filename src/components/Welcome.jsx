@@ -14,12 +14,12 @@ const Welcome = () => {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-between min-h-screen w-full overflow-hidden">
+    <div className="relative flex flex-col items-center justify-between min-h-screen w-full overflow-auto">
       <Navigation />
       <div className="w-full h-full absolute top-0 left-0">
         <Image
           src={Waves}
-          className="absolute top-0 left-0 -z-10 object-cover w-full h-full"
+          className="absolute top-0 left-0 -z-10 object-cover w-screen h-screen"
           alt="Home Page Waves"
         />
       </div>
