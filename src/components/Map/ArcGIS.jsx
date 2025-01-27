@@ -208,11 +208,20 @@ const ArcGIS = ({ width, height, markers }) => {
         view.graphics.add(pointGraphic);
       });
 
-      return () => view && view.destroy();
+      return () => {
+        if (view) {
+          view.destroy();
+          mapDiv.current.innerHTML = "";
+        }
+      };
     }
   }, [mapDiv, markers]);
 
-  return <div className={`m-0 p-0 ${width} ${height}`} ref={mapDiv}></div>;
+  return (
+    <div className="relative w-full">
+      <div className={`relative ${width} ${height}`} ref={mapDiv}></div>;
+    </div>
+  );
 };
 
 export default ArcGIS;
