@@ -14,17 +14,17 @@ const Welcome = () => {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-between min-h-screen w-full overflow-auto">
+    <div className="relative flex flex-col items-center justify-between min-h-screen w-full overflow-hidden">
       <Navigation />
       <div className="w-full h-full absolute top-0 left-0">
         <Image
           src={Waves}
-          className="absolute top-0 left-0 -z-10 object-cover w-screen h-screen"
+          className="absolute top-0 left-0 -z-10 object-cover w-full h-full"
           alt="Home Page Waves"
         />
       </div>
       <div className="w-full md:w-11/12 lg:w-3/4 xl:w-2/3 relative flex flex-col items-center justify-center text-center">
-        <p className="text-8xl font-bold mb-10 text-air-black-100">OMEGA</p>
+        <p className="text-8xl font-bold mb-10 text-air-black-100">OMEGA.</p>
         <p className="text-3xl font-base text-air-black-100">
           OMEGA Initiative: Objective Measurement / Monitoring / Mitigation of
           Emissions from Goods Movement and Impacts on Air Quality.
