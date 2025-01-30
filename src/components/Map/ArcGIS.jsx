@@ -7,7 +7,7 @@ import PopupTemplate from "@arcgis/core/PopupTemplate";
 import { statusAqiColor } from "@/data/StatusAqiColor";
 import { aqiValue } from "@/data/Aqi";
 import FeatureLayer from "@arcgis/core/layers/FeatureLayer";
-import MapImageLayer from "@arcgis/core/layers/MapImageLayer";
+// import MapImageLayer from "@arcgis/core/layers/MapImageLayer";
 
 const ArcGIS = ({ width, height, markers }) => {
   const mapDiv = useRef(null);
@@ -64,10 +64,10 @@ const ArcGIS = ({ width, height, markers }) => {
       });
 
       // Traffic Layer
-      const trafficLayer = new MapImageLayer({
-        url: "https://traffic.arcgis.com/arcgis/rest/services/World/Traffic/MapServer",
-      });
-      map.add(trafficLayer);
+      // const trafficLayer = new MapImageLayer({
+      //   url: "https://traffic.arcgis.com/arcgis/rest/services/World/Traffic/MapServer",
+      // });
+      // map.add(trafficLayer);
 
       // Feature Layer for AQI markers
       const layer = new FeatureLayer({
